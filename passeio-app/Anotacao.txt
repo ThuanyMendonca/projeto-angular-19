@@ -1,0 +1,40 @@
+Comandos:
+
+Criar projeto Angular com modulos:
+ng new NOME_PROJETO --no-standalone
+
+Instalar o Tailwindcss nas dependencias do projeto:
+npm install --save tailwindcss postcss autoprefixer
+
+Iniciar o Tailwindcss:
+npx tailwindcss init
+
+Alterar o styles.scss:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Alterar o tailwind.config.js:
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+Comando para criar um modulo com o routing:
+ng generate module NOME_MODULO --routing
+
+Lazy loading
+
+Criar classe:
+ng g class NOME_CLASSE
+
+Formulário reativo:
+Observa as mudanças do formulário
+
+FormGroup - representa o formulário
+FormControl - representa os campos do formulário

@@ -1,0 +1,14 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Shoppings",
+      "descricao": "Para compras e passeios"
+    },
+    {
+      "nome": "Restaurantes",
+      "descricao": "Os melhores da gastronomia",
+      "id": "2"
+    }
+  ]
+}

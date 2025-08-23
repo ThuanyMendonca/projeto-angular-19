@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CategoriaService } from '../categoria.service';
 
 @Component({
   selector: 'app-categoria',
@@ -10,7 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class CategoriaComponent {
   camposForm: FormGroup;
 
-  constructor() {
+  constructor(private service: CategoriaService) {
     this.camposForm = new FormGroup({
       // FormControl recebe dois parametros: valor inicial e validadores
       nome: new FormControl('', Validators.required),
@@ -22,8 +23,17 @@ export class CategoriaComponent {
     this.camposForm.markAllAsTouched();
 
     if(this.camposForm.valid) {
-      console.log(this.camposForm.value);
-      this.camposForm.reset(); // limpa o formulario
+      // Pode utilizar o subscribe das 2 formas
+      // .subscribe( categoria => {
+      //   console.log('Categoria salva com sucesso!', categoria);
+      // });
+      this.service.salvar(this.camposForm.value).subscribe({
+        next: (categoria) => {
+          console.log('Categoria salva com sucesso!', categoria);
+          this.camposForm.reset(); // limpa o formulario
+        },
+        error: (erro) => console.error('Erro ao salvar categoria', erro.message)
+      });
     }
   }
 

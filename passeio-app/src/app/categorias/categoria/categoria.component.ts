@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CategoriaService } from '../categoria.service';
+import { isCampoFormInvalido } from '../../shared/form-utils/validaCampos';
 
 @Component({
   selector: 'app-categoria',
@@ -37,8 +38,7 @@ export class CategoriaComponent {
     }
   }
 
-  isCampoInvalido(nomeCampo: string) : boolean {
-    const campo = this.camposForm.get(nomeCampo);
-    return campo?.invalid && campo?.touched && campo?.errors?.['required'] || false;
-  }
+  isCampoInvalido(campo: string){
+      return isCampoFormInvalido(this.camposForm, campo);
+    }
 }

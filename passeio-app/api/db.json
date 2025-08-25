@@ -9,6 +9,42 @@
       "nome": "Restaurantes",
       "descricao": "Os melhores da gastronomia",
       "id": "2"
+    },
+    {
+      "id": "9130",
+      "nome": "Abc",
+      "descricao": "dahdsiasduansdiuasd"
+    },
+    {
+      "id": "2abf",
+      "nome": "Praias",
+      "descricao": "As melhores indicações do litoral"
+    }
+  ],
+  "lugares": [
+    {
+      "id": "7c80",
+      "nome": "Salvador",
+      "categoria": "Praias",
+      "localizacao": "Bahia",
+      "urlFoto": "https://www.mapadeviajante.com.br/wp-content/uploads/2022/01/2021-Salvador-Capa-1.jpg",
+      "avaliacao": "4"
+    },
+    {
+      "id": "99cd",
+      "nome": "Praia do Espelho",
+      "categoria": "Shoppings",
+      "localizacao": "Teste Local",
+      "urlFoto": "https://i0.statig.com.br/bancodeimagens/b3/l0/kb/b3l0kbm9yhoby8hgv046m9iag.jpg",
+      "avaliacao": "5"
+    },
+    {
+      "id": "99cd",
+      "nome": "Praia Ilha Bela",
+      "categoria": "Praias",
+      "localizacao": "Teste Local",
+      "urlFoto": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Sunset_View_-_Ilhabela.jpg",
+      "avaliacao": "5"
     }
   ]
 }
